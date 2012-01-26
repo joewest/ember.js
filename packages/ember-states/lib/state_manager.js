@@ -137,7 +137,7 @@ Ember.StateManager = Ember.State.extend(
       };
     }
 
-    this.enterState(exitStates, enterStates, state);
+    Ember.run(this.enterState(exitStates, enterStates, state));
   },
 
   getState: function(name) {
